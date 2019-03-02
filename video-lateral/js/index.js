@@ -1,30 +1,22 @@
-!(function() {
-  var youtube = document.querySelectorAll(".youtube");
-  for (var i = 0; i < youtube.length; i++) {
-    var source =
-      "https://img.youtube.com/vi/" +
-      youtube[i].dataset.embed +
-      "/sddefault.jpg";
-    var image = new Image();
-    image.src = source;
-    image.addEventListener(
-      "load",
-      (function() {
-        youtube[i].appendChild(image);
-      })(i)
-    );
-    youtube[i].addEventListener("click", function() {
-      this.innerHTML = "";
-      let player = new YT.Player(this, {
-          height: this.clientHeight,
-          width: this.clientWidth,
-          videoId: this.dataset.embed,
-          events: {
-            'onReady': () => {
-              setTimeout(() => player.playVideo(), 2000);
-            }
-          }
+"use strict";
+$(function() {
+    $(".youtube").each(function() {
+        // Based on the YouTube ID, we can easily find the thumbnail image
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+        // Overlay the Play icon to make it look like a video player
+        $(this).append($('<div/>', {'class': 'play'}));
+
+        $(document).delegate('#'+this.id, 'click', function() {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', {'allowfullscreen': '1', 'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(this).replaceWith(iframe);
         });
     });
-  }
-})();
+ });
