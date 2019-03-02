@@ -14,6 +14,6 @@ $(document).ready(function() {
       // Replace the YouTube thumbnail with YouTube HTML5 Player
       $(this).append(iframe);
     });// /click
-  }); // /each video
+  }); // /each video 
 // END Fast & Agile YouTube Embed by Schoberg.net
 }); // /document ready
