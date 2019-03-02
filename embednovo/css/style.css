@@ -1,10 +1,86 @@
-#video{
- position: relative;
- background: transparent;
+.cover {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  position: absolute;
+  margin: auto;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 50%;
+  text-align: center;
+}
+.cover h2 {
+  font-size: 36px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 1.3em;
+  margin-bottom: 2rem;
+}
+.cover p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6em;
+  margin-bottom: 1em;
+}
+.cover a {
+  color: #cadecb;
 }
 
-.ytplayer-container{
- position: absolute;
- top: 0;
- z-index: -1;
+/* This is the SCSS you'll need */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  margin: rem-calc(0 0 54.5);
+  min-height: 31.25rem;
+  overflow: hidden;
+}
+
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  position: absolute;
+  z-index: 2;
+}
+
+.video-expand {
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1em;
+  opacity: .4;
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  z-index: 3;
+}
+.video-expand:hover {
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tv .screen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
+  opacity: 0;
+  transition: opacity .5s;
+}
+.tv .screen.active {
+  opacity: 1;
 }

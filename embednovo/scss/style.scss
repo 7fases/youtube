@@ -1,0 +1,85 @@
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+
+.cover {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	position: absolute;
+  margin: auto;
+	top: 10%;
+	left: 0;
+  right: 0;
+  bottom: 0;
+	z-index: 100;
+	width: 50%;
+  text-align: center;
+  h2 {
+    font-size: 36px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 1.3em;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.6em;
+    margin-bottom: 1em;
+  }
+  a {
+    color: #cadecb;
+  }
+}
+
+/* This is the SCSS you'll need */
+
+.video-wrapper {
+	position: relative;
+	width: 100%;
+	margin: rem-calc(0 0 54.5);
+  min-height: rem(500);
+	overflow: hidden;
+}
+.video-overlay {
+	height: 100%;
+  width: 100%;
+	opacity: .8;
+	position: absolute;
+	z-index: 2;
+}
+.video-expand {
+	color: white;
+	font-size: rem(18);
+	line-height: 1em;
+	opacity: .4;
+	position: absolute;
+	top: rem(15);
+	right: rem(15);
+	z-index: 3;
+	&:hover {
+		@include transition(all 400ms ease-in-out);
+	}
+}
+.tv {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	.screen {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		margin: auto;
+		opacity: 0;
+		transition: opacity .5s;
+		&.active {
+			opacity: 1;
+		}
+	}
+}
