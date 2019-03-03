@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 190px;
+        height: 200px;
         z-index: 100;
         background: transparent;
     }
@@ -30,7 +30,7 @@
         right: 0;
         top: 0;
         border: none;
-        height: auto;
+        height: 190px;
         cursor: pointer;
         -webkit-transition: .4s all;
         -moz-transition: .4s all;
@@ -42,8 +42,8 @@
     }
     
     .youtube-player .play {
-        height: 52px;
-        width: 52px;
+        height: 72px;
+        width: 72px;
         left: 50%;
         top: 50%;
         margin-left: -36px;
