@@ -1,0 +1,19 @@
+<html>
+<body>
+<div id="which" style="font-size: 40px;">
+This is f1.html<hr/>
+first choice
+</div><script type="text/javascript">
+    if(self.location==top.location) {
+        // get choice from  select
+        var cv = document.getElementById("which").value;
+        // just to show multiple cookie pairs work
+        document.cookie = "fffoo=zzz";
+        // and add the url cookie        
+        document.cookie = "url=" + self.location;
+        // jump to the page that will home to the iframe
+        top.location.replace('testY.html' );
+    }
+  </script>
+</body>
+</html>

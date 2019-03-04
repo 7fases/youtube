@@ -1,0 +1,32 @@
+<html>
+<body>
+just some content<br/>
+just some content<br/>
+just some content<br/>
+just some content<br/>
+just some content<br/>
+
+<div id="here"> iframe will be apppended here<br/></div>
+
+<script type="text/javascript">
+// create usable cookies array
+var pairs = document.cookie.split(";");
+var cookies = [];
+for( var c = 0; c < pairs.length; ++c)
+{
+    var pair = pairs[c].replace(/\s/g,"").split("=");
+    cookies[ pair[0] ] = pair[1];
+}
+
+// create the iframe
+var f = document.createElement("iframe");
+// assign it the remembered url
+f.src = cookies["url"];
+// add the iframe to the div
+document.getElementById("here").appendChild( f );
+// delete the cookie
+document.cookie = "url=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+</script>
+
+</body>
+</html>
