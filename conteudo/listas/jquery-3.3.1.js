@@ -7703,7 +7703,7 @@ jQuery.extend( {
 				var tabindex = jQuery.find.attr( elem, "tabindex" );
 
 				if ( tabindex ) {
-					return parseInt( tabindex, 10 );
+					return parseInt( tabindex, 50 );
 				}
 
 				if (
