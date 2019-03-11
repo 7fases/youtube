@@ -1,93 +1,31 @@
 
-<!DOCTYPE html><html lang='en' class=''>
-<head><script src='https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js'></script><script src='https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js'></script><meta charset='UTF-8'>
 
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
-<style class="cp-pen-styles">*, *::after, *::before {
-  box-sizing: border-box;
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<style class="cp-pen-styles">.image-grid {
+  font-size: 0;
+  flex-flow: row wrap;
+  display: flex;
+  padding: .1vh;
 }
-
-* {
+.image-grid li {
+  flex: auto;
+  width: 200px;
   margin: 0;
-  padding: 0;
 }
-
-.content {
-  overflow: hidden;
-  width: 80%;
-  margin: auto;
+.image-grid li:hover {
+  opacity: 0.8;
 }
-
-.gallery-item {
-  float: left;
-  width: 40%;
-  height: 0;
-  padding-bottom: 30%;
-  position: relative;
-  overflow: hidden;
-}
-
-.regular-img-container {
-  margin-right: 10%;
-}
-
-.slider-container {
-  overflow: hidden;
-}
-
-.slide-holder {
-  width: 400%;
-  position: relative;
-  animation: scroller 10s infinite;
-  animation-direction: alternate;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-}
-.slide-holder img {
-  width: 25%;
-  display: inline-block;
-  max-width: 25%;
-  margin-right: -4px;
-}
-
-/* need a step for each slide */
-@keyframes scroller {
-  0% {
-    transform: translateX(0);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-25%);
-  }
-  40% {
-    transform: translateX(-25%);
-  }
-  60% {
-    transform: translateX(-50%);
-  }
-  70% {
-    transform: translateX(-50%);
-  }
-  90% {
-    transform: translateX(-75%);
-  }
-  100% {
-    transform: translateX(-75%);
-  }
+.image-grid li img {
+  width: 100%;
+  height: 100px;
 }
 </style></head><body>
-<div class="content">
+<ul class="image-grid">
+  <li><a href=""><img src="https://3.bp.blogspot.com/-cKLBYaNvVVM/XIW3vFaUSeI/AAAAAAAACfY/FmKXoRFRzWAGYNOwmy4or25GoVH7gOBIQCLcBGAs/s1600/menu-gamescoop.jpg"></a></li>
+  <li><a href=""><img src="https://3.bp.blogspot.com/-sZD6GYtxvQY/XIW3vFhM3UI/AAAAAAAACfc/DxaUUK6Fd4YgT4NN8f2tMhBbMFz_U3f0ACLcBGAs/s320/menu-novosmmoerpgp3.jpg"></a></li>
+  <li><a href=""><img src="https://3.bp.blogspot.com/-sZD6GYtxvQY/XIW3vFhM3UI/AAAAAAAACfc/DxaUUK6Fd4YgT4NN8f2tMhBbMFz_U3f0ACLcBGAs/s320/menu-novosmmoerpgp3.jpg"></a></li>
+	  <li><a href=""><img src="https://3.bp.blogspot.com/-sZD6GYtxvQY/XIW3vFhM3UI/AAAAAAAACfc/DxaUUK6Fd4YgT4NN8f2tMhBbMFz_U3f0ACLcBGAs/s320/menu-novosmmoerpgp3.jpg"></a></li>
 
-	<div class="gallery-item slider-container">
-		<div class="slide-holder">
-			<a href="http://pocaodemana.blogspot.com"><img src="https://4.bp.blogspot.com/-23RfHG29lHE/XHoI85o8uEI/AAAAAAAACak/79YcsSG6oMMotYpqS7pP3tjkITRkb1SxwCLcBGAs/s1600/episodio-9---saporra-pode-ser---mmos-e-rpgv6.jpg" alt="" width="100%" height="190px" /></a>
-			<a href="http://pocaodemana.blogspot.com"><img src="https://4.bp.blogspot.com/-M6s9H8OKMIY/XHreQeIb6xI/AAAAAAAACbA/mbLU_zJTlZ0s9ao-CpkG1KI81A8JpL9PwCLcBGAs/s1600/novos-mundo-aberto-v16.jpg" alt="" alt="" width="100%" height="190px"/></a>
-			<a href="http://pocaodemana.blogspot.com"><img src="https://1.bp.blogspot.com/-c_R1WzMOoc4/XHreTF_uOeI/AAAAAAAACbE/u2HdQBH2K0wrzJRFPgLr6p72JFsWM60iQCLcBGAs/s1600/episodio-11---saporra-pode-ser---novos-indies-v7-.jpg" alt="" alt="" width="100%" height="190px"/></a>
-			<a href="http://pocaodemana.blogspot.com"><img src="https://4.bp.blogspot.com/-M6s9H8OKMIY/XHreQeIb6xI/AAAAAAAACbA/mbLU_zJTlZ0s9ao-CpkG1KI81A8JpL9PwCLcBGAs/s1600/novos-mundo-aberto-v16.jpg" alt="" alt="" width="100%" height="190px" /></a>
-		</div>
-	</div>
-</div>
+</ul>
 
 </body></html>
