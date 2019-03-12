@@ -1,0 +1,137 @@
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('iframe-player', {
+                events: {
+                    'onReady': onPlayer1Ready,
+                }
+            });
+            player2 = new YT.Player('iframe-player-2', {
+                height: '100%',
+                width: '100%',
+                videoId: 'icSxgo1dYMI',
+                events: {
+                    'onReady': onPlayer2Ready,
+                        }
+            });
+            player3 = new YT.Player('iframe-player-3', {
+                height: '100%',
+                width: '100%',
+                videoId: 'icSxgo1dYMI',
+                events: {
+                    'onReady': onPlayer3Ready,
+                }
+            });
+          console.log('player 1 video api ready')
+        }
+
+        function onPlayer1Ready(event) {
+            $('#play_vid').click(function() {
+                event.target.playVideo();
+            });
+        }
+      function onPlayer2Ready(event) {
+          $('#play_vid_2').click(function() {
+                event.target.playVideo();
+            });
+        }
+      function onPlayer3Ready(event) {
+          $('#play_vid_3').click(function() {
+                event.target.playVideo();
+            });
+        }
+
+        $(document).ready(function() {
+            $('#player').hide();
+            $('#play_vid').click(function() {
+                $('#player').show();
+                $('#play_vid').hide();
+            });
+           $('#player_2').hide();
+            $('#play_vid_2').click(function() {
+                $('#player_2').show();
+                $('#play_vid_2').hide();
+            });
+           $('#player_3').hide();
+            $('#play_vid_3').click(function() {
+                $('#player_3').show();
+                $('#play_vid_3').hide();
+            });
+			
+        });
+    </script>
+
+<script>
+//         var tag = document.createElement('script');
+
+//         tag.src = "https://www.youtube.com/iframe_api";
+//         var firstScriptTag = document.getElementsByTagName('script')[0];
+//         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+//         var player2;
+//         function onYouTubeIframeAPIReady() {
+//             player2 = new YT.Player('player_2', {
+//                 height: '100%',
+//                 width: '100%',
+//                 videoId: 'icSxgo1dYMI',
+//                 events: {
+//                     'onReady': onPlayerReady,
+//                 }
+//             });
+//           console.log('player 2 video api ready')
+//         }
+
+//         function onPlayerReady(event) {
+//             $('#play_vid_2').click(function() {
+//                 event.target.playVideo();
+//             });
+//         }
+
+//         $(document).ready(function() {
+//             $('#player_2').hide();
+//             $('#play_vid_2').click(function() {
+//                 $('#player_2').show();
+//                 $('#play_vid_2').hide();
+//             });
+//         });
+    </script>
+
+    <div id="player">
+      <iframe id="iframe-player"
+        width="100%" height="190px"
+        src="https://www.youtube.com/embed/YfCLqZYvxoA?enablejsapi=1"
+        frameborder="0" allowfullscreen="1"
+      ></iframe>
+    </div>
+    <img id="play_vid" width="100%" height="190px" src="https://4.bp.blogspot.com/-23RfHG29lHE/XHoI85o8uEI/AAAAAAAACak/79YcsSG6oMMotYpqS7pP3tjkITRkb1SxwCLcBGAs/s1600/episodio-9---saporra-pode-ser---mmos-e-rpgv6.jpg" /><br />
+
+
+
+
+   <div id="player_2">
+      <iframe id="iframe-player-2"
+        width="100%" height="190px"
+        src="https://www.youtube.com/embed/3ZjHIe2Vhhs?enablejsapi=1"
+        frameborder="0" allowfullscreen="1"
+      ></iframe>
+    </div>
+    <img id="play_vid_2" width="100%" height="190px" src="https://4.bp.blogspot.com/-M6s9H8OKMIY/XHreQeIb6xI/AAAAAAAACbA/mbLU_zJTlZ0s9ao-CpkG1KI81A8JpL9PwCLcBGAs/s1600/novos-mundo-aberto-v16.jpg" /><br />
+
+
+
+
+   <div id="player_3">
+      <iframe id="iframe-player-3"
+        width="100%" height="190px"
+        src="https://www.youtube.com/embed/oRVP4PRzhMQ?enablejsapi=1"
+        frameborder="0" allowfullscreen="1"
+      ></iframe>
+    </div>
+    <img id="play_vid_3" width="100%" height="190px" src="https://1.bp.blogspot.com/-c_R1WzMOoc4/XHreTF_uOeI/AAAAAAAACbE/u2HdQBH2K0wrzJRFPgLr6p72JFsWM60iQCLcBGAs/s1600/episodio-11---saporra-pode-ser---novos-indies-v7-.jpg" /><br />
