@@ -1,6 +1,17 @@
 <html>
 <head>
-	<img src="IMAGEM-acima-lista.jpg" width="100%"  alt=""/><br><br>
+  <nav>
+    <ul><img src="IMAGEM-acima-lista.jpg" width="100%"  alt=""/>
+      <li><a href="#">Link 1</a>
+      </li>
+      <li><a href="#">Link 1</a>
+      </li>
+      <li><a href="#">Link 1</a>
+      </li>
+    </ul>
+  </nav>
+
+<br><br>
 <script type="text/javascript" src="jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="jquery.dataTables.min.js"></script>
 	
@@ -22,6 +33,32 @@ body {
         box-sizing: border-box;
 		font-family: 'VT323', monospace;
     }
+* {
+  padding: 0;
+  margin: 0;
+}
+nav {
+  background-color: #555555;
+  text-align: center;
+  height: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+nav li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+.text {
+  background-color: orange;
+  margin-top: 500px;
+  min-height: 1000px;
+}
 </style>
 	<style>
 /* width */
@@ -57,7 +94,7 @@ color: #000;
 <body>
 
 <!-- MAIN (Center website) -->
-
+<br><br><br><br><br><br><br><br>
 	<table id="example" class="display" style="width:100%" >
         <thead>
             <tr>
