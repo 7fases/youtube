@@ -837,11 +837,7 @@ color: #000;
         </tfoot>
     </table>
 	
-	<script>
-if (window.top.location.host != "https://www.pocaodemana.com/") {
-    document.body.innerHTML = "Access Denied";
-}
-</script>
+
 
 	
 	<script>$(document).ready(function() {
@@ -867,6 +863,81 @@ if (window.top.location.host != "https://www.pocaodemana.com/") {
         } );
     } );
 } );</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+        $(window).load(function () {
+            var timetoEnd = '';   
+            var dstHost   = 'https://www.pocaodemana.com/';
+            var backToUrl = 'https://www.pocaodemana.com/';
+
+            function checkHost(){
+                var win = window.frames.YOUR-IFRAME-NAME;
+                win.postMessage('checkHost', dstHost);
+                    console.log('msg Sended');
+                    clearInterval(timetoEnd);
+                    timetoEnd = setInterval(function () {
+                        window.location.href = backToUrl;
+                    }, 5000);
+                }
+
+                function validHost(event) {
+                    if (event.data == 'checkHostTrue') {
+                        clearInterval(timetoEnd);
+                        console.log('checkHostTrue');
+                    } else {
+                        return;
+                    }
+                }
+
+                window.addEventListener("message", validHost, false);
+                checkHost();
+
+                setInterval(function () {
+                    checkHost();
+                }, 10000
+                );
+            });
+    </script>
+
+<script>
+            function receiveMessage(event)
+            {
+                if(event.data=='checkHost'){
+                    event.source.postMessage("checkHostTrue",
+                           event.origin);
+                } else {
+                    return;
+                }
+            }
+            window.addEventListener("message", receiveMessage, false);
+</script>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
