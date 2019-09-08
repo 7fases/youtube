@@ -1,4 +1,7 @@
+
 <html>
+	
+	
 <head>
 	<img src="IMAGEM-acima-lista.jpg" width="100%"  alt=""/>
   <nav>
@@ -834,7 +837,12 @@ color: #000;
         </tfoot>
     </table>
 	
-	
+	<script>
+if (window.top.location.host != "https://www.pocaodemana.com/") {
+    document.body.innerHTML = "Access Denied";
+}
+</script>
+
 	
 	<script>$(document).ready(function() {
     // Setup - add a text input to each footer cell
