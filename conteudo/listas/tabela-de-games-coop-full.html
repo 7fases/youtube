@@ -873,25 +873,6 @@ color: #000;
 
 
 
-<script>
-
-//Check if the page is loaded in an iframe
-if(window.self != window.top) {
-  //Almost all browsers will deny Cross-Origin script access, so
-  //we will use a try-catch block
-  try {
-    if(window.parent.location.hostname.indexOf("https://7fases.github.io/youtube/conteudo/listas/tabela-de-games-coop-full.html") == -1) {
-      window.location.href = "https://pocaodemana.com/";
-    } else {
-      //You are in an iframe but Same-Origin
-    }
-  } catch (ex) {
-    //Congrats, you are in an iframe loaded in a stranger's site!
-    window.location.href = "https://www.pocaodemana.com/";
-  }
-}
-</script>
-
 
 
 
