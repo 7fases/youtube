@@ -5,24 +5,211 @@
 
 <!-- dicas de pesquisa style -->
 <style>
-#a{
-     font-family: &quot;vt323&quot;
-	background-color:black;
-    padding:10px;
-    border:2px solid #464AFC;    
+@supports (display: grid) {
+
+  .grid {
+
+
+  }
+
+  .grid {
+	   height: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh 30vh repeat(7, minmax(20vh, 1fr));
+    grid-template-areas:
+      "hero   hero"
+      "big1   big1"
+      "med1   med1"
+      "med2   med2"
+      "small1 small2"
+      "small3 small4"
+      "small5 small6"
+      "small7 small8"
+      "small9 small10";
+  }
+
+  @media screen and (min-width: 100%) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 25vh);
+      grid-template-areas:
+        "hero   hero   hero   med1   med1"
+        "hero   hero   hero   med2   med2"
+        "big1   big1   big1   big1   big1"
+        "small1 small2 small3 small4 small5"
+        "small6 small7 small8 small9 small10";
+    }
+  }
+
+  @media screen and (min-width: 100%) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+      "small1 hero   hero hero med1   med1"
+      "small2 hero   hero hero med2   med2"
+      "small3 small5 big1 big1 small7 small8"
+      "small4 small6 big1 big1 small9 small10";
+    }
+  }
+
+
+
 }
 
-.tooltip{
-     font-family: 'VT323';
-	 line-height: 1.0;
-	 font-size: 16px;
-	background:black;
-    color:white;
-    padding:5px;
-    box-shadow:0 0 10px 0 rgba(0, 0, 0, 1);
-    border-radius:5px;
-    opacity:0;
+/* flexbox fallback is the browser does not support display:grid */
+@supports not (display: grid) {
+
+  .grid {
+
+
+  }
+
+  .grid .item {
+  
+
+ 
+
+
+
+
+
+  }
+
 }
+
+/* Styles, just for fun */
+
+
+@supports not (display: grid) {
+  body:before {
+    content: 'Seu navegador nao suporta essa aplicacao.';
+    display: block;
+    padding: 2rem 2rem 0;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+
+.header h1,
+
+
+@media screen and (min-width: 100%) {
+
+  .header h1 {
+    font-size: 3.75rem;
+  }
+
+  .header h2 {
+	  font-family: 'VT323';
+ 
+
+  }
+
+}
+
+.box {
+
+	font-family: 'VT323';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.diamond {
+font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  box-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+  background-image: linear-gradient(to top left, #ddd 0%, #fff 100%);
+  text-align: center;
+  transform-origin: center;
+}
+
+.diamond span {
+ 
+  font-weight: bold;
+}
+
+.grid .item:hover .diamond,
+.grid .item:focus .diamond {
+  
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.tooltip {
+	
+  margin-top: -188px;
+  position: absolute;
+  z-index: 0;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  background: #29343d;
+  opacity: 0;
+  color: #cedfe9;
+  font-size: 0.875rem;
+  transition: opacity 600ms, transform 600ms;
+}
+
+.tooltip:before {
+
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: calc(50% - 10px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #29343d;
+}
+
+.grid .item:hover .tooltip,
+.grid .item:focus .tooltip {
+  opacity: 1;
+  transform: translateY(70px);
+}
+
+.grid .item {
+  position: relative;
+  padding: 1vw;
+  background-position:  left bottom;
+  background-size: 150% 100%;
+  transition: background 500ms, outline 500ms;
+  background-position: top left;
+  outline: transparent;
+}
+
+.grid .item:hover,
+.grid .item:focus {
+  background-position: top right;
+}
+
+.grid .item:focus {
+  outline: 2px solid #3eabfa;
+}
+
+.grid .item:nth-child(1)  { background-image: linear-gradient(45deg, royalblue 25%, royalblue 36%,  pink 80%, royalblue 80%); }
+.grid .item:nth-child(2)  { background-image: linear-gradient(45deg, royalblue 0%, royalblue 40%); }
+.grid .item:nth-child(3)  { background-image: linear-gradient(45deg, royalblue 0%, royalblue 40%); }
+.grid .item:nth-child(4)  { background-image: linear-gradient(45deg, royalblue 0%, black 60%); }
+.grid .item:nth-child(5),
+.grid .item:nth-child(6),
+.grid .item:nth-child(7),
+.grid .item:nth-child(8),
+.grid .item:nth-child(9),
+.grid .item:nth-child(10),
+.grid .item:nth-child(11),
+.grid .item:nth-child(12),
+.grid .item:nth-child(13),
+.grid .item:nth-child(14) { background-image: linear-gradient(45deg, royalblue 0%, royalblue 60%); }
 </style>
 <!-- dicas de pesquisa style -->
 
@@ -272,9 +459,18 @@ tr:nth-child(even) {
 		<tr><td colspan="7" >
 	
 			
-				<div id="wrapper">
-    <div id="a"  style="color: white; font-family: &quot;vt323&quot; , monospace; font-size: 24px; padding: 8px;">DICAS DE COMO PESQUISAR</div>
-</div>
+
+
+<div class="grid " style="padding: 0px;  width: 100%; height: 60px; ">
+  <div class="item" style="padding: 0px;  width: 100%; height: 60px; ">
+    <div class="box" style="padding: 0px;  width: 100%; height: 60px; ">
+      <div class="diamond" style="font-size: 20px; width: 120px; height: 60px;" ><span>DICAS DE PESQUISA</span></div>
+      <div class="tooltip" style="font-size: 18px;">A pesquisa é feita para ser a mais intuitiva possivel, pode-se pesquisar pelo nome, estilo de gameplay e gênero ao mesmo tempo e em qualquer ordem.<br><br>Exemplos<br>⭐ = Melhores games (por mim) <br>4 + = Games que possuam mais de 4 players<br>2 3 = Games que possuam de 2 a 3 Players<br>Lan 4 = Games com multiplayer via wifi com 4 players</div>
+    </div>
+ </div> </div>
+			
+			
+			
 	</td></tr>
 		
 		
@@ -406,7 +602,7 @@ padding: 5px;
 
 
 
-<tr style="padding: 0px;"><th colspan="3" style="background-color: white; padding: 0px; ">
+<tr style="padding: 0px;"><th colspan="3" style="background-color: white;  padding: 0px; ">
 
 
 
@@ -484,44 +680,4 @@ document.getElementById("defaultOpen").click();
 
 
 
-<!-- dicas de pesquisa -->
-<script>
-var div = document.getElementById('wrapper');
-var a = document.getElementById("a");
-var fadeSpeed = 25; // a value between 1 and 1000 where 1000 will take 10
-                    // seconds to fade in and out and 1 will take 0.01 sec.
-var tipMessage = "A pesquisa é feita para ser a mais intuitiva possivel, pode-se pesquisar pelo nome, estilo de gameplay e gênero ao mesmo tempo e em qualquer ordem.<br><br>Exemplos<br>⭐ = Melhores games (por mim) <br>4 + = Games que possuam mais de 4 players<br>2 3 = Games que possuam de 2 a 3 Players<br>Lan 4 = Games com multiplayer via wifi com 4 players";
-
-var showTip = function(){    
-    var tip = document.createElement("span");
-    tip.className = "tooltip";
-    tip.id = "tip";
-    tip.innerHTML = tipMessage;
-    div.appendChild(tip);
-    tip.style.opacity="0"; // to start with...
-    var intId = setInterval(function(){
-        newOpacity = parseFloat(tip.style.opacity)+0.1;
-        tip.style.opacity = newOpacity.toString();
-        if(tip.style.opacity == "1"){
-            clearInterval(intId);
-        }
-    }, fadeSpeed);
-};
-var hideTip = function(){
-    var tip = document.getElementById("tip");
-    var intId = setInterval(function(){
-        newOpacity = parseFloat(tip.style.opacity)-0.1;
-        tip.style.opacity = newOpacity.toString();
-        if(tip.style.opacity == "0"){
-            clearInterval(intId);
-            tip.remove();
-        }
-    }, fadeSpeed);
-    tip.remove();
-};
-
-a.addEventListener("mouseover", showTip, false);
-a.addEventListener("mouseout", hideTip, false);
-</script>
-<!-- dicas de pesquisa -->
    
