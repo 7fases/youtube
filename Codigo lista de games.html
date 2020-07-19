@@ -43,7 +43,7 @@
     @media (max-width: 768px) {
       .botao {
         padding:2px 3px;
-        font-size:60%;
+        font-size:70%;
         line-height: 1;
       }
     }
@@ -55,6 +55,33 @@
         line-height: 1.2;
       }
     }
+    .stickbot {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100vh;
+    height: 30px;
+    transform: translateY(-100%);
+}
+A.class2 {color:rgb(105, 105, 105);}
+A.class2:link {text-decoration: none; color: rgb(117, 117, 117);}
+A.class2:visited {text-decoration: none; color: rgb(110, 110, 110);}
+A.class2:hover {text-decoration: underline; color: white;}
+A.class2:active {text-decoration: none; color: white;}
+
+
+
+@media (max-width: 760px) {
+    .mobileespaco {
+        margin-top:55px;
+    }
+    
+}
+@media (min-width: 800px) {
+    .mobileespaco {
+        margin-top:40px;
+    }
+    
+}
     </style>
     
     
@@ -130,7 +157,7 @@
     
     
     <div class="uk-section-default">
-        <div class=" uk-section uk-light uk-background-cover" style="background-image: url(https://7fases.github.io/youtube/imagens/bg-lista-coop.png)">
+        <div class=" uk-section uk-light uk-background-cover" style="background-image: url(https://7fases.github.io/youtube/imagens/bg-lista-coop.webp)">
             <div class="uk-container">
     
     
@@ -245,9 +272,9 @@
     
     
     
-    <div class="uk-padding-remove uk-background-primary uk-light uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="offset: 50; bottom: #top">
+    <div id="menususpenso" class="uk-padding-remove uk-background-primary uk-light uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="offset: 50; bottom: #top">
     
-    
+     
     
     <div class="uk-margin-auto" >
     
@@ -416,25 +443,37 @@
     
     
     
-    
     <div  uk-filter="target: .js-filter">
     
         <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-expand">
     
-                <div class="uk-grid-small uk-child-width-auto" uk-grid>
+
+                <div class="uk-child-width-expand stickbot uk-card-body mobileespaco " style="margin-bottom: -110px; z-index: 980;" uk-sticky="offset: 180; top: 50; animation: uk-animation-slide-top;">
+                
+                <div class="uk-width-1-5 uk-margin uk-position-center" uk-grid>
                     <div>
                         <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                            <li class="uk-active" uk-filter-control><a href="#">Todos</a></li>
-                            <li uk-filter-control="[data-topgames='⭐']"><a href="#">Top Games</a></li>
+                         <button class="class2 uk-button-default uk-button-small uk-margin-remove uk-padding-remove uk-text-meta uk-padding-remove-top uk-padding-remove-bottom"> <li class="uk-active" uk-filter-control><a class="class2" href="#">Todos</a> 
+                        
+                        
+                        
+                </li>
+        
+               
+    
+
+                  
+        </button>    
+
+
+
+        <button class="class2 uk-button-default uk-button-small uk-margin-remove uk-text-meta uk-padding-remove"> <li class="class2" uk-filter-control="[data-topgames='⭐']"><a class="class2" href="#">Top Games</a></li></button>    
                         </ul>
                     </div>
     
-    
-    
-    
                     
-                    <button class="uk-button-default uk-button-small" type="button">Nª Players</button>    
+                    <button class="class2 uk-button-default uk-button-small uk-margin-remove uk-padding-small uk-text-meta uk-padding-remove-top uk-padding-remove-bottom">NªPlayers</button>    
     
     
                     <div uk-dropdown >
@@ -451,45 +490,86 @@
     
     
     
-    <button class="uk-button-default uk-button-small" type="button">Detalhes</button>    
-    
-    
-    <div uk-dropdown >
-    
-    <ul class="uk-nav uk-dropdown-nav uk-margin uk-subnav-pill" uk-margin>
-                            <li uk-filter-control="[data-estilo1='coop']"><a href="#">Cooperativo</a></li>
-                            <li uk-filter-control="[data-estilo2='versus']"><a href="#">Versus</a></li>
-                            <li uk-filter-control="[data-teladividida='sim']"><a href="#">Tela Dividida</a></li>
-                            <li uk-filter-control="[data-lan='sim']"><a href="#">Lan mode</a></li>
-                            <li ><a href="#">Gratuitos (breve)</a></li>
-        </ul>
-    
-                    </div>
+        
     
     
     
     
-    <button uk-margin class="uk-button-default uk-button-small" type="button">Gênero</button>    
+                  <button class="class2 uk-button-default uk-button-small uk-margin-remove uk-padding-small uk-text-meta uk-padding-remove-top uk-padding-remove-bottom">Gênero</button>    
     
     
-    <div uk-dropdown >
+    <div class="uk-width-large" uk-dropdown>
     
-        <ul class="uk-nav uk-dropdown-nav uk-margin uk-subnav-pill" uk-margin>
+        <div class="uk-dropdown-grid uk-grid-match uk-child-width-expand@s" uk-grid>
+
+                <div>
+                        <div class="uk-width-auto uk-margin-auto">
+                        <ul class="uk-nav uk-dropdown-nav">
                             <li uk-filter-control="[data-genero1='rpg']"><a href="#">RPG</a></li>
                             <li uk-filter-control="[data-genero2='luta']"><a href="#">Luta</a></li>
                             <li uk-filter-control="[data-genero3='estrategia']"><a href="#">Estrategia</a></li>
                             <li uk-filter-control="[data-genero4='corrida']"><a href="#">Corrida</a></li>
                             <li uk-filter-control="[data-genero5='partygame']"><a href="#">Party Game</a></li>
-                            <li uk-filter-control="[data-genero6='acao']"><a href="#">Ação</a></li>
+                            <li uk-filter-control="[data-genero16='esporte']"><a href="#">Esportes</a></li>
                             <li uk-filter-control="[data-genero7='aventura']"><a href="#">Aventura</a></li>
-                            <li uk-filter-control="[data-genero8='puzzle']"><a href="#">Puzzle</a></li>
                             <li uk-filter-control="[data-genero9='roguelike']"><a href="#">Roguelike</a></li>
+                        </ul>
+                 
+                        </div>
+                    
+                        <div class="uk-width-auto uk-margin-auto">
+                                <ul class="uk-nav uk-dropdown-nav ">
+                                <li uk-filter-control="[data-genero6='acao']"><a href="#">Ação</a></li>
+                            <li uk-filter-control="[data-genero8='puzzle']"><a href="#">Puzzle</a></li>
                             <li uk-filter-control="[data-genero10='boardgame']"><a href="#">Boardgame</a></li>
                             <li uk-filter-control="[data-genero11='horror']"><a href="#">Horror</a></li>
-        </ul>
+                            <li uk-filter-control="[data-genero12='simulacao']"><a href="#">Simulação</a></li>
+                            <li uk-filter-control="[data-genero13='plataforma']"><a href="#">Plataforma</a></li>
+                            <li uk-filter-control="[data-genero14='MMO']"><a href="#">MMO</a></li>
+                            <li uk-filter-control="[data-genero15='MMORPG']"><a href="#">MMORPG [Breve]</a></li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+
+
+
+
+        
+
+
+        </div>
+
+
+
+        <button class="class2 uk-button-default uk-button-small uk-margin-remove uk-padding-small uk-text-meta uk-padding-remove-top uk-padding-remove-bottom">Detalhes</button>    
     
-                    </div>
     
+        <div uk-dropdown >
+        
+        <ul class="uk-nav uk-dropdown-nav uk-margin uk-subnav-pill" uk-margin>
+                                <li uk-filter-control="[data-estilo1='coop']"><a href="#">Cooperativo</a></li>
+                                <li uk-filter-control="[data-estilo2='versus']"><a href="#">Versus</a></li>
+                                <li uk-filter-control="[data-teladividida='sim']"><a href="#">Tela Dividida</a></li>
+                                <li uk-filter-control="[data-lan='sim']"><a href="#">Lan mode</a></li>
+                                <li ><a href="#">Gratuitos (breve)</a></li>
+            </ul>
+        
+                        </div>
+
+
+
+
+
+
+
+
+
+    <!--
+
+                        <span class="class2 uk-active" uk-filter-control="sort: data-name"><a  class="class2" href="#" uk-icon="icon: arrow-down"></a></span>
+                        <span uk-filter-control="sort: data-name; order: desc"><a  class="class2" href="#" uk-icon="icon: arrow-up"></a></span>
+            -->
     
 
 <!--
@@ -583,18 +663,12 @@
     
             </div>
     
-    
-    
-            <div class="uk-width-auto uk-text-nowrap">
-    
-    
-                <span class="uk-active" uk-filter-control="sort: data-name"><a class="uk-icon-link" href="#" uk-icon="icon: arrow-down"></a></span>
-                <span uk-filter-control="sort: data-name; order: desc"><a class="uk-icon-link" href="#" uk-icon="icon: arrow-up"></a></span>
-    
-            </div>
+       
+  
+         
         </div>
-    
-        <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+</div>
+        <ul class="js-filter uk-child-width-1-2  uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
     
     
     
@@ -633,7 +707,7 @@
                 >
                 <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/unruly-heroes-game-estilo-trine-para-pc.html">
                         <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Unruly-Heroes.jpg" uk-img >
+                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Unruly-Heroes.webp" uk-img >
                 
                 <!– Imagem do game -->
                 
@@ -692,7 +766,7 @@
                 >
                 <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/cat-quest-2-jogo-multiplayer-para-pc.html">
                         <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cat-Quest-2.jpg" uk-img >
+                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cat-Quest-2.webp" uk-img >
                 
                 <!– Imagem do game -->
                 
@@ -743,7 +817,7 @@
                 >
                 <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/horizon-chase-turbo-game-de-corrida.html">
                         <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Horizon-Chase-Turbo.jpg" uk-img >
+                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Horizon-Chase-Turbo.webp" uk-img >
                 
                 <!– Imagem do game -->
                 
@@ -794,7 +868,7 @@
                 >
                 <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/resident-evil-cooperativo-multiplayer-tela-dividida.html">
                         <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-Revelations-2.jpg" uk-img >
+                        data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-Revelations-2.webp" uk-img >
                 
                 <!– Imagem do game -->
                 
@@ -843,7 +917,7 @@
     
     data-players2='sim'>
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/biped-game-cooperativo-ao-estilo-portal-2.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/biped.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/biped.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -886,7 +960,7 @@
     
     data-players2='sim'>
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/portal-knights-game-estilo-minecraft.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Portal-Knights.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Portal-Knights.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -932,7 +1006,7 @@
     data-players3='sim'
     data-players4='sim' >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/borderlands-2-games-para-jogar-por-lan.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Borderlands2.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Borderlands2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -973,7 +1047,7 @@
     data-players2='sim'>
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/outward-rpg-com-tela-dividida.html">
 
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/outward.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/outward.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1019,7 +1093,7 @@
     data-players3='sim'
     data-players4='sim' >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/armies-of-exigo-jogo-para-jogar-por-rede.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/armies-of-exigo-.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/armies-of-exigo-.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1070,7 +1144,7 @@
     data-players4='sim' >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/magicka-2-game-cooperativo-com-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Magicka-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Magicka-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1125,7 +1199,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/brawlhalla-games-de-luta-para-pc-ps4.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Brawlhalla.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Brawlhalla.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1178,7 +1252,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/call-of-duty-black-ops-3-games-de-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Call-of-Duty-Black-Ops-3.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Call-of-Duty-Black-Ops-3.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1226,7 +1300,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/castle-crashers-jogos-multiplayer.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Castle-Crashers.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Castle-Crashers.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1270,7 +1344,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/cuphead-games-multiplayer-com-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cuphead.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cuphead.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1315,7 +1389,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/diablo-2-rpg-cooperativo-por-lan-rede.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Diablo-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Diablo-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1363,7 +1437,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/gauntlet-jogo-multiplayer-com-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gauntlet.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gauntlet.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1411,7 +1485,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/gears-of-war-4-jogo-para-pc-com-lan-rede.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gears-of-War-4.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gears-of-War-4.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1454,7 +1528,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/gears-5-game-multiplayer-cooperativo-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gears5.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Gears5.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1505,7 +1579,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/how-to-survive-2-game-zumbi-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/How-to-Survive-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/How-to-Survive-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1556,7 +1630,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/left-4-dead-2-jogos-para-jogar-em-rede.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Left-4-Dead-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Left-4-Dead-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1602,7 +1676,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/lost-planet-2-games-com-suporte-lan-rede.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lost-Planet-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lost-Planet-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1672,7 +1746,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/games-cooperativo-com-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Magicka.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Magicka.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1720,7 +1794,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/melhores-games-de-luta-para-pc-naruto.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/NARUTO-SHIPPUDEN-Ninja-STORM-4.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/NARUTO-SHIPPUDEN-Ninja-STORM-4.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1785,7 +1859,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/levelhead-games-estilo-mario-maker.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Levelhead.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Levelhead.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1845,7 +1919,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/games-para-jogar-com-amigos-overcooked.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Overcooked-1.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Overcooked-1.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1896,7 +1970,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/overcooked-2-jogo-com-tela-dividida-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Overcooked-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Overcooked-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1946,7 +2020,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/party-panic-games-estilo-party-game.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Party-Panic.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Party-Panic.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -1993,7 +2067,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/rayman-jogos-para-jogar-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rayman-Legends.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rayman-Legends.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2041,7 +2115,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/rayman-games-para-jogar-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rayman-Origins.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rayman-Origins.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2090,7 +2164,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/jogo-de-corrida-do-sonic.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Sonic-and-All-Stars-Racing-Transformed.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Sonic-and-All-Stars-Racing-Transformed.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2136,7 +2210,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/mario-kart-8-no-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Mario-Kart-8.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Mario-Kart-8.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2187,7 +2261,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/new-super-mario-bros-u-no-pc-switch.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-mario-bross-u.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-mario-bross-u.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2234,7 +2308,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/super-mario-3d-world-jogar-no-pc-cemu.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-Mario-3d-World.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-Mario-3d-World.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2278,7 +2352,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/spelunky-roguelike-para--pc-fraco.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Spelunky.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Spelunky.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2326,7 +2400,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/the-escapists-game-cooperativo-estrategia.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Escapists-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Escapists-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2372,7 +2446,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/game-estilo-warcraft-3-lord-of-rings.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Lord-of-the-Rings-The-Battle-for-Middle-earth-II.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Lord-of-the-Rings-The-Battle-for-Middle-earth-II.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2419,7 +2493,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/torchlight-2-jogo-estilo-diablo-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Torchlight-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Torchlight-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2455,7 +2529,7 @@
     <!– Itens de classificação do game -->
     <li  
     data-name="34"
-    
+    data-topgames='⭐'
     data-estilo1='coop'
     data-teladividida='sim'
     
@@ -2469,7 +2543,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/trine-4-games-para-jogar-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-4.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-4.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2479,7 +2553,7 @@
     
     
     <!– Nome do game -->
-    Trine 4
+    Trine 4 ⭐
    
     
     
@@ -2510,7 +2584,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/victor-vran-rpg-hackn-slash-isometrico.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Victor-Vran.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Victor-Vran.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2552,7 +2626,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/hunted-demons-forge-games-por-lan.html">
     <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-    data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Hunted-The-Demon's-Forge.jpg" uk-img >
+    data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Hunted-The-Demon's-Forge.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2595,7 +2669,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/childen-of-morta-rpg-estilo-diablo.html">
     <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light "  
-    data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Children-of-Morta.jpg" uk-img >
+    data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Children-of-Morta.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2639,7 +2713,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/dragon-ball-fighters-melhores-games-luta.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Dragon-Ball-Fighters-Z.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Dragon-Ball-Fighters-Z.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2683,7 +2757,7 @@
     data-players4='sim' >
     
         <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/divinity-original-sin-2-rpg-com-tela-dividida.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://images.wallpapersden.com/image/download/divinity-original-sin-2-artwork_59979_1280x2120.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/divinity-original-sin2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2724,7 +2798,7 @@
     
     data-players2='sim'>
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/games-com-tela-dividida-divinity-original-sin.html">
-                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/divinity-original-sin.jpg" uk-img >
+                <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/divinity-original-sin.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2761,7 +2835,7 @@
     <!– Itens de classificação do game -->
     <li  
     data-name="100"
-    
+    data-topgames='⭐'
     data-estilo2='versus'
     data-teladividida='sim'
     
@@ -2775,7 +2849,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/pummel-party-games-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pummel-Party.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pummel-Party.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2785,7 +2859,7 @@
     
     
     <!– Nome do game -->
-    Pummel Party
+    Pummel Party ⭐
    
     
     
@@ -2820,7 +2894,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/kalimba-puzzle-games-para-pc-e-xbox-one.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/kalimba.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/kalimba.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2865,7 +2939,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/enter-gungeon-jogo-para-jogar-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Enter-the-Gungeon.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Enter-the-Gungeon.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2908,7 +2982,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/for-king-jogo-de-estrategia-e-tabuleiro.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/For-the-King-game.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/For-the-King-game.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2950,7 +3024,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/full-mojo-rampage-jogos-cooperativo.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Full-Mojo-Rampage].jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Full-Mojo-Rampage].webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -2995,7 +3069,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/ibb-and-obb-puzzle-games-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Ibb-and-Obb.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Ibb-and-Obb.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3037,7 +3111,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/injustice-melhores-games-de-luta-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/injustice-gods-among-us.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/injustice-gods-among-us.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3088,7 +3162,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/injustice-2-melhores-games-de-luta-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/injustice-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/injustice-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3136,7 +3210,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/mortal-kombat-11-top-luta-games-de-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/mortal-kombat.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/mortal-kombat.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3185,7 +3259,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/portal-2-games-puzzle-no-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Portal-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Portal-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3231,7 +3305,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/pressure-overdrive-games-de-dois.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pressure-Overdrive.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pressure-Overdrive.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3277,7 +3351,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/resident-evil-5-jogos-cooperativos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-5.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-5.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3324,7 +3398,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/resident-evil-6-games-cooperativo-de.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-6.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Resident-Evil-6.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3378,7 +3452,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/cavaleiros-do-zodiaco-para-pc-e-consoles.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Saint-Seiya-Hades.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Saint-Seiya-Hades.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3425,7 +3499,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/street-fighter-v-melhores-games-luta.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Street-fighter-5.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Street-fighter-5.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3470,7 +3544,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/trine-3-jogos-para-jogar-com-amigos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-3.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-3.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3514,7 +3588,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/trine-2-games-para-jogar-com-namoradao.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Trine-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3562,7 +3636,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/unravel-two-games-para-jogar-com-filho.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Unravel-Two.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Unravel-Two.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3611,7 +3685,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/move-or-die-party-game-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Move-or-Die-game.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Move-or-Die-game.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3656,7 +3730,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/moving-out-melhores-games-coop-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/moving-out.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/moving-out.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3702,7 +3776,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/pong-quest-game-tela-dividida-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/PONG-Quest.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/PONG-Quest.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3748,7 +3822,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/it-came-from-space-and-ate-our-brains.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/It-came-from-space-and-ate-our-brains.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/It-came-from-space-and-ate-our-brains.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3798,7 +3872,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/cranked-up-jogos-party-games.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cranked-Up.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Cranked-Up.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3860,7 +3934,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/streets-of-rage-4-game-luta-arcadepc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Streets-of-Rage-4.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Streets-of-Rage-4.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3914,7 +3988,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/guacamelee2-jogo-multiplayer-coop-pra-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Guacamelee-2.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Guacamelee-2.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -3960,7 +4034,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/marvelvscapcom-.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/MARVEL-VS-CAPCOM-INFINITE.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/MARVEL-VS-CAPCOM-INFINITE.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4007,7 +4081,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/quest-hunter-games-tela-dividida-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Quest-Hunter.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Quest-Hunter.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4054,7 +4128,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/munchkin-quacked-quest-jogos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Munchkin-Quacked-Quest.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Munchkin-Quacked-Quest.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4107,7 +4181,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/wargroove-game-de-estrategia-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Wargroove.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Wargroove.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4160,7 +4234,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/human-fall-flat-simulacao-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Human-Fall-Flat.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Human-Fall-Flat.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4212,7 +4286,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/spongebob-squarepants-o-game-do-bob.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/SpongeBob-SquarePants-Battle-for-Bikini-Bottom-Rehydrated.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/SpongeBob-SquarePants-Battle-for-Bikini-Bottom-Rehydrated.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4262,7 +4336,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/a-way-out-game-multiplayer-cooperativo.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/A-Way-Out.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/A-Way-Out.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4316,7 +4390,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/darksiders-genesis-multiplayer-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Darksiders-Genesis.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Darksiders-Genesis.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4364,7 +4438,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/broforce-jogo-de-tiro-doidao-para-ate-4.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Broforce.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Broforce.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4413,7 +4487,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/tools-up-um-jogo-de-reformar-casas-com.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Tools-Up.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Tools-Up.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4461,7 +4535,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/the-wonderful-101-.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Wonderful-101-Remastered.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Wonderful-101-Remastered.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4508,7 +4582,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/out-of-space-o-game-de-faxina-espacial.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Out-of-Space.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Out-of-Space.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4554,7 +4628,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/keep-talking-and-nobody-explodes-game.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Keep-Talking-and-Nobody-Explodes.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Keep-Talking-and-Nobody-Explodes.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4606,7 +4680,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/death-squared-game-de-puzzle.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Death-Squared.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Death-Squared.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4653,7 +4727,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/police-stories-game-de-estrategia.html">   
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Police-Stories.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Police-Stories.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4704,7 +4778,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/heave-ho-party-games-para-pc-e-switch.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Heave-Ho.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Heave-Ho.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4753,7 +4827,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/lego-star-wars-3-clone-wars-jogo-com.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/LEGO-Star-Wars-3---The-Clone-Wars.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/LEGO-Star-Wars-3---The-Clone-Wars.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4804,7 +4878,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/pikuniku-jogo-de-aventura-e-puzzle-para.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pikuniku.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Pikuniku.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4858,7 +4932,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/risk-global-estilo-game-de.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/RISK-Global-Domination.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/RISK-Global-Domination.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4909,7 +4983,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/blazing-chrome-jogos-arcade-de-2-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Blazing-Chrome.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Blazing-Chrome.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -4965,7 +5039,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/the-swords-of-ditto-rpg-cartoon-para-pc.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Swords-of-Ditto-Mormos-Curse.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Swords-of-Ditto-Mormos-Curse.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5016,7 +5090,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/sky-force-reloaded-game-de-navinha.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Sky-Force-Reloaded.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Sky-Force-Reloaded.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5055,6 +5129,7 @@
     data-teladividida='sim'
     
     data-genero5='partygame'
+    data-genero16='esporte'
     
     
     data-players4='sim'
@@ -5067,7 +5142,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/mario-tennis-no-pc-e-wiiu.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/mario-tennis-ultra-smash.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/mario-tennis-ultra-smash.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5119,7 +5194,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/pac-man-256-jogo-do-pacman-cooperativo.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/PAC-MAN-256.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/PAC-MAN-256.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5165,7 +5240,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/the-lego-movie-2-video-game-novo-jogo.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-LEGO-Movie-2-Videogame.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-LEGO-Movie-2-Videogame.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5214,7 +5289,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/riverbond-game-multiplayer-tela.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Riverbond.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Riverbond.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5256,7 +5331,7 @@
     data-teladividida='sim'
     
     data-genero5='partygame'
-    
+    data-genero16='esporte'
     
     data-players4='sim'
     data-players3='sim'
@@ -5267,7 +5342,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/super-tennis-blast-jogo-tenis-tela-dividida.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-Tennis-Blast.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-Tennis-Blast.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5321,7 +5396,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/battleblock-theater-game-de-quatro.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/BattleBlock-Theater.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/BattleBlock-Theater.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5370,7 +5445,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/wizard-of-legend-game-de-magos.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Wizard-of-Legend.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Wizard-of-Legend.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5420,7 +5495,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/minecraft-dungeons-minecraft.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Minecraft-dungeons.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Minecraft-dungeons.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5467,7 +5542,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/shift-happens-game-de-puzzle.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Shift-Happens.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Shift-Happens.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5519,7 +5594,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/lego-dc-super-villains-lego-para-pc-com.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/LEGO-DC-Super-Villains.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/LEGO-DC-Super-Villains.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5567,7 +5642,7 @@
     >
     <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/degrees-of-separation-game-de-dois-tela-dividia.html">
             <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
-            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Degrees-of-Separation.jpg" uk-img >
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Degrees-of-Separation.webp" uk-img >
     
     <!– Imagem do game -->
     
@@ -5589,21 +5664,3074 @@
     
     
     
+
+
+
+
+
+
+
+
+
+        
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="100"
+    
+    data-gratuito='sim'
+
+
+    data-estilo1='coop'
+    data-estilo2='versus'
+
+    data-genero14='MMO'
+    data-genero6='acao'
+    
+    
+    
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/steambirds-alliance-mmo-de-naves-para-pc.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Steambirds-alliance.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Steambirds Alliance
+  
+    
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
+        
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="101"
+    
+  
+    data-teladividida='sim'
+    data-estilo1='coop'
+
+    
+    data-genero1='rpg'
+    
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/warhammer-chaosbane-arpg-rpg-estilo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Warhammer-Chaosbane.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Warhammer: Chaosbane
+    
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+    
+        
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="102"
+    
+  
+    data-teladividida='sim'
+    data-estilo1='coop'
+
+
+    data-genero6='acao'
+
+
+    
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/helldivers-games-cooperativo-de-4.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Helldivers.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Helldivers
+    
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="103"
+    
+  
+    data-teladividida='sim'
+    data-estilo1='coop'
+
+    
+    data-genero7='aventura'
+    data-genero13='plataforma'
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/yooka-laylee-game-nostalgico-estilo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Yooka---Laylee.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Yooka-Laylee
+    
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+    
+
+
+
+
+
+    
+        
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="103"
+    
+  
+    data-teladividida='sim'
+    data-estilo1='coop'
+
+    
+    data-genero7='aventura'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/disney-universe-game-da-disney.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Disney-Universe.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Disney Universe
+    
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="104"
+    
+  
+    data-teladividida='sim'
+    data-estilo2='versus'
+
+    
+    data-genero2='luta'
+
+
+
+
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/guilty-gear-xrd-revelator-game-de-luta.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Guilty-Gear-XRD-Revelator.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    GUILTY GEAR Xrd REVELATOR
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
     
     
     
     
     
+
+
+
+
+
+
+
+
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="105"
+    
+  
+    data-teladividida='sim'
+    data-estilo2='versus'
+
+    
+    data-genero4='corrida'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
     
     
     
     
     
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/distance-game-de-corrida-tela-dividida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Distance.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Distance
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="106"
+    
+  
+    data-teladividida='sim'
+
+    data-estilo1='coop'
+    data-lan='sim'
+    
+    data-genero6='acao'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
     
     
     
     
     
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/serious-sam-3-bfe-game-doidao-de-tiro.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Serious-Sam-3.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Serious Sam 3: BFE
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="107"
+    
+  
+    data-teladividida='sim'
+
+    data-estilo2='versus'
+    
+    data-genero4='corrida'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/speedrunners-game-para-4-players.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Speedrunners.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Speedrunners
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="108"
+    
+  
+    data-estilo1='coop'
+    data-estilo2='versus'
+    data-teladividida='sim'
+    
+    data-genero16='esporte'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/disc-jam-game-de-esporte-de-disco.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Disc-Jam.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Disc Jam
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="109"
+    
+  
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+    data-genero6='acao'
+    data-genero13='plataforma'
+
+
+
+
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/guns-gore-and-cannoli-2.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Guns,-Gore-and-Cannoli-2.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Guns, Gore & Cannoli 2
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="110"
+    
+  
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/tricky-towers-game-estilo-tetris.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Tricky-Towers.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Tricky Towers
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="111"
+    
+  
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/lance-lot-party-game-de-guerra.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lance-A-Lot.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Lance A Lot
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="112"
+    
+  
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/blazerush-jogo-de-corrida-isometrico.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/BlazeRush.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    BlazeRush
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="113"
+    
+  
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/towerfall-ascension-jogo-de-pc-jogar-amigos.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Towerfall-Ascension.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    TowerFall Ascension
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="114"
+    
+  
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero16='esporte'
+
+
+
+
+ 
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/super-mega-baseball-3-game-de-baseball.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Super-Mega-Baseball-3.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Super Mega Baseball 3
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+       
+    <!– Itens de classificação do game -->
+
+
+
+ <!--
+
+    <li  
+    data-name="115"
+    
+  
+    data-estilo1='coop'
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+
+
+
+
+ 
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="#">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/KnightOut.webp" uk-img >
+    
+ 
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+  
+    KnightOut
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="116"
+    
+  
+    data-estilo1='coop'
+
+    
+    data-teladividida='sim'
+    
+    data-genero6='acao'
+
+
+
+
+ 
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/jamestown-jogo-de-navinha-para-4.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Jamestown.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Jamestown+
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="117"
+    
+    data-lan='sim'
+
+    data-estilo1='coop'
+
+    
+    
+    data-genero12='simulacao'
+
+
+
+
+ 
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/stardew-valley-jogo-de-fazenda-multiplayer.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Stardew-Valley.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Stardew Valley
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="118"
+    data-topgames='⭐'
+   
+    data-estilo1='coop'
+
+    
+    
+    data-genero12='simulacao'
+    data-genero7='aventura'
+
+
+
+ 
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/astroneer-jogo-de-simulacao-espacial.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/ASTRONEER.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Astroneer ⭐
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="119"
+    
+   
+    data-estilo2='versus'
+    data-teladividida='sim'
+    
+    data-genero2='luta'
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/05/soulcalibur-vi-jogo-de-luta-com-gerald.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Soulcalibur-VI.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Soulcalibur VI
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="120"
+    
+   
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+    data-genero6='acao'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/splatter-zombiecalypse-zumbi-tela-dividida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Splatter-Zombiecalypse-Now.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Splatter - Zombiecalypse Now
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="121"
+    
+   
+    data-estilo1='coop'
+    
+    data-teladividida='sim'
+    
+    data-genero13='plataforma'
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/bloodstained-ritual-of-night-jogo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Bloodstained-Ritual-of-the-Night.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Bloodstained: Ritual of the Night
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="122"
+    
+   
+    data-estilo1='coop'
+    
+    data-teladividida='sim'
+    
+    data-genero7='aventura'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/die-for-valhalla-jogo-tela-dividida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Die-for-Valhalla.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Die for Valhalla!
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="123"
+    
+   
+    data-estilo1='coop'
+    
+    data-teladividida='sim'
+    
+    data-genero7='aventura'
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/asterix-and-obelix-jogo-aventura.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Asterix-and-Obelix-XXL-3.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Asterix and Obelix XXL 3
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="124"
+    
+   
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/garfield-kart-furious-racing.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Garfield-Kart---Furious-Racing.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Garfield Kart - Furious Racing
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+    
+
+
+
+
+
+
+
+
+
+
+        
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="125"
+    
+   
+    data-estilo1='coop'
+    
+    data-teladividida='sim'
+    
+    data-genero7='aventura'
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/lara-croft-and-guardian-of-light-game.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lara-Croft-and-the-Guardian-of-Light.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Lara Croft and the Guardian of Light
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="126"
+    
+   
+    data-estilo1='coop'
+    
+    data-teladividida='sim'
+    
+    data-genero7='aventura'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/lara-croft-and-temple-of-osiris-jogo-do.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lara-Croft-and-the-Tample-of-Osiris.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Lara Croft and the Temple of Osiris
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="127"
+    
+   
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/grip-combat-racing-jogo-de-corrida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/GRIP-Combat-Racing.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    GRIP: Combat Racing
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="128"
+    data-topgames='⭐'
+   
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+    data-genero2='luta'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/stick-fight-game-jogo-de-luta-pc-com.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Stick-Fight-The-Game.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Stick Fight: The Game ⭐
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="129"
+    
+   
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/blur-jogo-de-corrida-com-poder.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/blur.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Blur
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="130"
+    
+   
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero5='partygame'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/rocket-league-jogo-de-futebol-com.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rocket-League.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Rocket League
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="131"
+    
+    data-estilo1='coop'
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+    data-genero3='estrategia'
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/rock-of-ages-2-bigger-boulder-jogo-de.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Rock-of-Ages-2-Bigger-Boulder.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Rock of Ages 2: Bigger & Boulder
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+    
+    
+    
+    
+        
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="132"
+
+
+
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    
+    data-genero4='corrida'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/road-redemption-jogo-de-corrida-moto.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Road-Redemption.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Road Redemption
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="133"
+
+
+
+    data-estilo1='coop'
+    
+    data-lan='sim'
+    
+    data-genero7='aventura'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/dont-starve-together-jogo-de-aventura.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Dont-Starve-Together.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Don't Starve Together
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="134"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+    data-lan='sim'
+    
+    data-genero6='acao'
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/the-binding-of-isaac-rebirth-game.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/The-Binding-of-Isaac-Rebirth.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    The Binding of Isaac: Rebirth
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+          
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="135"
+
+
+
+
+
+    data-teladividida='sim'
+    
+
+    data-estilo2='versus'
+
+    data-genero4='corrida'
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/f1-race-stars-jogo-de-corrida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/F1-Race-Stars.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    F1 RACE STARS
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="136"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+
+
+    data-genero6='acao'
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/just-shapes-and-beats-game-diferentao.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Just-Shapes-&-Beats.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Just Shapes and Beats
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+       
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="137"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+
+
+    data-genero6='acao'
+    data-genero12='simulacao'
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/lovers-in-dangerous-spacetime-jogo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Lovers-in-a-Dangerous-Spacetime.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Lovers in a Dangerous Spacetime
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="138"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+    
+
+    data-genero7='aventura'
+    data-genero13='plataforma'
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/guacamelee-o-primeiro-game-da-aventura.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Guacamelee-1.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Guacamelee!
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="139"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+
+    data-genero1='rpg'
+    
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/diablo-3-game-multiplayer-de-arpg.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Diablo-3-Eternal-Collection.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Diablo 3
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="140"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+
+    data-genero6='acao'
+    
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/nex-machina-jogo-multiplayer-com-tela.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Nex-Machina.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Nex Machina
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="141"
+
+
+
+    data-estilo2='versus'
+
+    data-teladividida='sim'
+
+    data-genero4='corrida'
+    
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/splitsecond-jogo-de-corrida.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Split-Second.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Split/Second
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="142"
+
+
+
+    data-estilo2='versus'
+
+    data-teladividida='sim'
+
+    data-genero5='partygame'
+    
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/worms-armageddon-jogo-cooperativo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Worms-Armageddon.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Worms Armageddon
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="143"
+
+
+
+    data-estilo1='coop'
+
+    data-teladividida='sim'
+
+    data-genero7='aventura'
+    
+
+
+
+
+    data-players2='sim'
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/sky-racket-jogo-para-jogar-com-amigo.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Sky-Racket.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Sky Racket
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="144"
+
+
+
+    data-estilo1='coop'
+    data-estilo2='versus'
+
+    data-teladividida='sim'
+
+    data-genero16='esporte'
+    
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/tennis-elbow-2013-jogo-de-tenis.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Tennis-Elbow-2013.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Tennis Elbow 2013
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="145"
+
+
+
+    data-estilo1='coop'
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+
+    data-genero16='esporte'
+    
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/tennis-elbow-manager-2-game-de-tenis.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Tennis-Elbow-Manager-2.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Tennis Elbow Manager 2
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="146"
+
+
+
+    data-estilo1='coop'
+    data-estilo2='versus'
+    
+    data-teladividida='sim'
+    data-lan='sim'
+
+    data-genero5='partygame'
+    
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/07/splody-game-jogo-estilo-bomberman-pc.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Splody.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Splody
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="147"
+
+
+
+    data-estilo1='coop'
+
+    
+    data-teladividida='sim'
+
+    data-genero6='acao'
+
+
+
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/beat-hazard-2-jogo-de-navinha.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Beat-Hazard-2.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Beat Hazard 2
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="149"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero5='partygame'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/stab-stab-stab-game-estilo-luta.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/STAB-STAB-STAB.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    STAB STAB STAB!
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="151"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero2='luta'
+
+
+
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/granblue-fantasy-versus-jogo-de-luta.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Granblue-Fantasy-Versus.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Granblue Fantasy: Versus
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="152"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero5='partygame'
+    data-genero2='luta'
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/shadow-brawlers-party-game-de-luta-para.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Shadow-Brawlers.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Shadow Brawlers
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="153"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/retimed-jogos-para-jogar-com-os-amigos.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Retimed.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Retimed
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="153"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/skelittle-giant-party-jogo-de-party.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/Skelittle-A-Giant-Party.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Skelittle: A Giant Party!!
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    
+    
+      
+    <!– Itens de classificação do game -->
+    <li  
+    data-name="153"
+
+
+
+    data-estilo2='versus'
+
+    
+    data-teladividida='sim'
+
+    
+    data-genero5='partygame'
+
+
+
+
+    data-players4='sim'
+    data-players3='sim'
+    data-players2='sim'
+    
+    
+    
+    
+    >
+    <a class="uk-link-reset" href="https://www.pocaodemana.com/2020/06/mr-driller-drillland-game-de-quebra.html">
+            <div class="uk-animation-toggle uk-card uk-card-default uk-card-body uk-flex-center uk-flex uk-flex-middle uk-background-cover uk-light " 
+            data-src="https://7fases.github.io/youtube/imagens/lista-games-coop/MR-DRILLER-DRILLLAND.webp" uk-img >
+    
+    <!– Imagem do game -->
+    
+                    <canvas width="600" height="800" ></canvas>
+                    <div class="fundotransparente uk-position-center "><p style="font-size:30px; text-shadow: 2px 2px #000000; background-color:rgba(0,0,0,0.5);" class="uk-text-large uk-text-bold uk-text-emphasis fontgame">
+                       
+    
+    
+    <!– Nome do game -->
+    Mr. DRILLER DrillLand
+    
+    
+    </p><br> 
+    </div>      </div>  </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
